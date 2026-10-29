@@ -36,16 +36,12 @@ export function HeroMedia() {
         ) : (
           heroSlides.map((s, idx) => (
             <img
-              key={s.src}
+              key={idx === i ? `on-${s.src}-${i}` : s.src}
               src={s.src}
               alt=""
-              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-[1500ms] ${idx === i ? "opacity-100" : "opacity-0"}`}
-            >
-            </img>
+              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-[1500ms] ${idx === i ? "opacity-100" : "opacity-0"} ${idx === i && playing ? "animate-kenburns" : ""}`}
+            />
           ))
-        )}
-        {!video && (
-          <img key={`kb-${i}`} src={heroSlides[i].src} alt="" className={`absolute inset-0 h-full w-full object-cover ${playing ? "animate-kenburns" : ""}`} />
         )}
       </div>
       <div className="absolute bottom-6 right-5 z-10 flex items-center gap-3">
