@@ -28,9 +28,9 @@ function Index() {
       <section className="relative flex min-h-[100svh] items-end overflow-hidden bg-ink text-ink-foreground">
         <HeroMedia />
         <div className="pointer-events-none absolute inset-0 bg-hero-fade" />
-        <div className="relative mx-auto w-full max-w-7xl px-5 pb-28 pt-40">
+        <div className="relative mx-auto w-full max-w-7xl px-5 pb-24 pt-32">
           <p className="font-display text-lg font-bold uppercase tracking-[0.3em] text-secondary">{site.city} · {site.years} anos</p>
-          <h1 className="mt-4 max-w-5xl text-6xl font-extrabold uppercase sm:text-7xl md:text-[8.5rem]">
+          <h1 className="mt-4 max-w-5xl text-6xl font-extrabold uppercase sm:text-7xl lg:text-[6.5rem]">
             Mais do que esporte.<span className="block text-secondary">Oportunidades</span> para transformar vidas.
           </h1>
           <p className="mt-6 max-w-xl text-lg opacity-90">{site.subtitle}</p>
