@@ -2,8 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Quote } from "lucide-react";
 import { HeroMedia } from "@/components/site/HeroMedia";
 import { Reveal } from "@/components/site/Reveal";
+import { Timeline } from "@/components/site/Timeline";
 import { ProjectCard } from "@/components/site/ProjectCard";
-import { impact, media, partners, projects, site, testimonials } from "@/content/site";
+import { media, partners, projects, site, testimonials } from "@/content/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -110,14 +111,7 @@ function Index() {
           <Reveal>
             <h2 className="max-w-3xl text-5xl font-extrabold uppercase md:text-7xl">Duas décadas de presença na comunidade.</h2>
           </Reveal>
-          <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {impact.map((m, k) => (
-              <Reveal key={m.label} delay={k * 120} className="border-t-2 border-primary-foreground/40 pt-5">
-                <p className="font-display text-7xl font-extrabold text-secondary">{m.value}</p>
-                <p className="mt-2 font-semibold">{m.label}</p>
-              </Reveal>
-            ))}
-          </div>
+          <Timeline />
         </div>
       </section>
 
