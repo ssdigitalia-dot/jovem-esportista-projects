@@ -23,7 +23,7 @@ export function Footer() {
             <li><Link to="/sobre" className="hover:text-secondary">Sobre nós</Link></li>
             <li><Link to="/projetos" className="hover:text-secondary">Projetos</Link></li>
             <li><Link to="/contato" className="hover:text-secondary">Contato</Link></li>
-            <li><a href={c.transparency} target="_blank" rel="noreferrer" className="hover:text-secondary">Portal da Transparência</a></li>
+            <li><Link to="/transparencia" className="hover:text-secondary">Portal da Transparência</Link></li>
             <li><Link to="/privacidade" className="hover:text-secondary">Política de Privacidade</Link></li>
           </ul>
         </div>
