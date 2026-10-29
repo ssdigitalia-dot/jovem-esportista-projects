@@ -163,3 +163,18 @@ export const testimonials: { quote: string; name: string; role: string; photo?: 
 export const partners: { name: string; logo?: string; url?: string }[] = [{ name: "Prefeitura de Diadema" }];
 
 export const heroSlides = projects.slice(0, 6).map((p) => ({ src: p.image, label: p.name }));
+
+/** Portal da Transparência: acrescente novos anos/instrumentos e documentos aqui. */
+export const transparency = [
+  {
+    year: "2025",
+    entity: "Ministério do Esporte – SNEAELIS",
+    title: "Termo de Fomento Instrumento nº 976198",
+    value: "R$ 294.000,00",
+    documents: [
+      { label: "Transparência Termo de Fomento 976198 – Ministério do Esporte", url: "https://drive.google.com/file/d/11_jpWDotHFvobnN5_Xa-Z7CB6Czji2dC/view?usp=sharing" },
+      { label: "Publicação no Diário Oficial da União – Associação Projeto Jovem Esportista", url: "https://drive.google.com/file/d/1ZBc72BIBEcM8GVdWlCpIEQKEs30iu7xG/view?usp=sharing" },
+      { label: "Extrato do Termo de Fomento 976198 – Ministério do Esporte", url: "https://drive.google.com/file/d/18jwDvsTIOALf0r1_TviX4pglLzPvFpgs/view?usp=sharing" },
+    ],
+  },
+];
