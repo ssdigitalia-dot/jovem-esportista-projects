@@ -178,3 +178,13 @@ export const transparency = [
     ],
   },
 ];
+
+/** Linha do tempo (apenas marcos confirmados; sem datas exatas quando não informadas). */
+export const timeline = [
+  { when: "Há mais de 25 anos", title: "Páscoa Feliz", text: "Começa a tradição de levar alegria e solidariedade às comunidades durante a Páscoa." },
+  { when: "Há 20 anos", title: "Nasce o Jovem Esportista", text: "O projeto é criado em Diadema para transformar vidas através da cultura, educação e esporte." },
+  { when: "Esporte", title: "Quadras e rodas", text: "Futebol de salão, capoeira, zumba e pilates promovem saúde, disciplina e trabalho em equipe." },
+  { when: "Cultura e educação", title: "Novos talentos", text: "Ballet, música, inglês, informática e fotografia ampliam oportunidades educacionais e profissionais." },
+  { when: "Ação social", title: "Banco de Alimentos", text: "Com a Prefeitura de Diadema, doadores e colaboradores, alimentos chegam às famílias cadastradas." },
+  { when: "2025", title: "Ministério do Esporte", text: "Termo de Fomento nº 976198 com o Ministério do Esporte – SNEAELIS fortalece as atividades." },
+];
