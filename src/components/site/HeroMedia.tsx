@@ -30,7 +30,7 @@ export function HeroMedia() {
     <>
       <div className="absolute inset-0" aria-hidden={!video}>
         {video ? (
-          <video ref={videoRef} className="h-full w-full object-cover" src={video.src} poster={video.poster ?? heroSlides[0].src} muted loop playsInline autoPlay>
+          <video ref={videoRef} className="h-full w-full object-cover" src={video.src} poster={video.poster ?? heroSlides[0]?.src} muted loop playsInline autoPlay>
             {video.captions && <track kind="captions" src={video.captions} srcLang="pt-BR" label="Português" default />}
           </video>
         ) : (
@@ -47,7 +47,7 @@ export function HeroMedia() {
       <div className="absolute bottom-6 right-5 z-10 flex items-center gap-3">
         {!video && (
           <span className="hidden font-display text-sm font-bold uppercase tracking-widest text-ink-foreground/80 sm:block">
-            {String(i + 1).padStart(2, "0")} / {String(heroSlides.length).padStart(2, "0")} · {heroSlides[i].label}
+            {String(i + 1).padStart(2, "0")} / {String(heroSlides.length).padStart(2, "0")} · {heroSlides[i]?.label}
           </span>
         )}
         <button
