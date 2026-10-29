@@ -20,7 +20,7 @@ export const Route = createFileRoute("/sobre")({
 function Sobre() {
   return (
     <>
-      <PageHero eyebrow={`${site.years} anos em ${site.city}`} title="Educar, cuidar e inspirar" image={projects[1].image} />
+      <PageHero eyebrow={`${site.years} anos em ${site.city}`} title="Educar, cuidar e inspirar" image={projects[1]!.image} />
       <section className="mx-auto grid max-w-7xl gap-12 px-5 py-24 md:grid-cols-2">
         <Reveal>
           <p className="font-display text-lg font-bold uppercase tracking-widest text-primary">Nossa história</p>

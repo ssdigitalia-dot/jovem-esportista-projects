@@ -21,7 +21,7 @@ export const Route = createFileRoute("/projetos/")({
 function Projetos() {
   return (
     <>
-      <PageHero eyebrow="Projetos e iniciativas" title="Nossos projetos" image={projects[0].image}>
+      <PageHero eyebrow="Projetos e iniciativas" title="Nossos projetos" image={projects[0]!.image}>
         Atividades gratuitas de esporte, cultura e educação, além de ações sociais que apoiam famílias de Diadema.
       </PageHero>
       <section className="mx-auto grid max-w-7xl gap-5 px-5 py-20 sm:grid-cols-2 lg:grid-cols-3">
