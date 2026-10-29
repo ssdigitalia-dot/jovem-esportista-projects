@@ -161,4 +161,4 @@ export const testimonials: { quote: string; name: string; role: string; photo?: 
 /** Parceiros confirmados. */
 export const partners: { name: string; logo?: string; url?: string }[] = [{ name: "Prefeitura de Diadema" }];
 
-export const heroSlides = [media.banner, ...projects.slice(0, 5).map((p) => p.image)];
+export const heroSlides = projects.slice(0, 6).map((p) => ({ src: p.image, label: p.name }));
