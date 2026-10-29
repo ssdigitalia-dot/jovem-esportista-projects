@@ -34,7 +34,7 @@ function Contato() {
   };
   return (
     <>
-      <PageHero eyebrow="Contato" title="Vamos conversar" image={projects[3].image}>
+      <PageHero eyebrow="Contato" title="Vamos conversar" image={projects[3]!.image}>
         Entre em contato e descubra como nossas ações em cultura, educação e esporte estão transformando vidas há {site.years} anos em Diadema.
       </PageHero>
       <section className="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:grid-cols-[1fr_1.4fr]">

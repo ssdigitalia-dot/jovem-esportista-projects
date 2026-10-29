@@ -1,3 +1,4 @@
+import heroVideoAsset from "@/assets/videos/hero.mp4.asset.json";
 /**
  * Conteúdo editável do site. Todos os textos, fotos, vídeo, projetos,
  * depoimentos, parceiros e contatos vêm deste arquivo.
@@ -12,7 +13,7 @@ export const media = {
   banner: wix("ffc53056376f4e7499a3a9c820b164e2", "jpeg", 1600, 1000),
   bannerSide: wix("5f9d1e3777ea4d17ac0746c336e03f31", "jpg", 900, 1100),
   /** Vídeo institucional: informe a URL de um .mp4 (e .vtt de legendas) para substituir a abertura em fotos. */
-  heroVideo: null as null | { src: string; captions?: string; poster?: string },
+  heroVideo: { src: heroVideoAsset.url } as null | { src: string; captions?: string; poster?: string },
 };
 
 export const site = {

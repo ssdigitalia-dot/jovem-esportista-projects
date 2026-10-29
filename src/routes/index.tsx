@@ -14,8 +14,8 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Oportunidades para transformar vidas por meio do esporte, da cultura e da educação em Diadema." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:image", content: projects[0].image },
-      { name: "twitter:image", content: projects[0].image },
+      { property: "og:image", content: projects[0]!.image },
+      { name: "twitter:image", content: projects[0]!.image },
     ],
   }),
   component: Index,
@@ -168,7 +168,7 @@ function Index() {
 
       {/* 7. Chamada final */}
       <section className="relative overflow-hidden bg-ink py-28 text-ink-foreground">
-        <img src={projects[1].image} alt="" className="absolute inset-0 h-full w-full object-cover opacity-30" />
+        <img src={projects[1]!.image} alt="" className="absolute inset-0 h-full w-full object-cover opacity-30" />
         <Reveal className="relative mx-auto max-w-4xl px-5 text-center">
           <h2 className="text-6xl font-extrabold uppercase md:text-8xl">Vem com a gente.</h2>
           <p className="mx-auto mt-5 max-w-xl text-lg opacity-90">Participe das atividades, apoie um projeto ou converse com a nossa equipe.</p>

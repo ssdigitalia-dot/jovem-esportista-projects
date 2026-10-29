@@ -44,6 +44,22 @@ export function HeroMedia() {
           ))
         )}
       </div>
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
+        {Array.from({ length: 14 }).map((_, k) => (
+          <span
+            key={k}
+            className="wind-streak"
+            style={{
+              top: `${(k * 37) % 90 + 5}%`,
+              ["--w" as string]: `${10 + ((k * 7) % 22)}vw`,
+              ["--d" as string]: `${3 + ((k * 5) % 4)}s`,
+              ["--delay" as string]: `${(k * 0.45) % 5}s`,
+              ["--o" as string]: `${0.25 + ((k * 3) % 5) / 10}`,
+              ["--dy" as string]: `${-((k * 11) % 12)}vh`,
+            }}
+          />
+        ))}
+      </div>
       <div className="absolute bottom-6 right-5 z-10 flex items-center gap-3">
         {!video && (
           <span className="hidden font-display text-sm font-bold uppercase tracking-widest text-ink-foreground/80 sm:block">
@@ -52,7 +68,7 @@ export function HeroMedia() {
         )}
         <button
           onClick={() => setPlaying((p) => !p)}
-          aria-label={playing ? "Pausar apresentação" : "Reproduzir apresentação"}
+          aria-label={playing ? "Pausar vídeo" : "Reproduzir vídeo"}
           className="rounded-full border border-ink-foreground/40 bg-ink/40 p-3 text-ink-foreground backdrop-blur transition-colors hover:bg-primary"
         >
           {playing ? <Pause size={18} /> : <Play size={18} />}

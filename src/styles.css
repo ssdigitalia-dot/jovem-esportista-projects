@@ -45,13 +45,13 @@
 
 :root {
   --radius: 0.75rem;
-  --background: oklch(0.99 0.004 85);
+  --background: oklch(0.995 0.003 60);
   --foreground: oklch(0.2 0.01 30);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.2 0.01 30);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.2 0.01 30);
-  --primary: oklch(0.59 0.235 28);          /* #ED0B0D */
+  --primary: oklch(0.66 0.19 25);          /* vermelho da marca, tom mais leve */
   --primary-foreground: oklch(0.99 0 0);
   --secondary: oklch(0.86 0.175 92);        /* #FFCB05 */
   --secondary-foreground: oklch(0.2 0.01 30);
@@ -59,16 +59,16 @@
   --brand-blue-foreground: oklch(0.99 0 0);
   --ink: oklch(0.17 0.01 30);
   --ink-foreground: oklch(0.97 0.005 85);
-  --muted: oklch(0.955 0.008 85);
+  --muted: oklch(0.975 0.01 30);
   --muted-foreground: oklch(0.46 0.01 40);
-  --accent: oklch(0.95 0.04 92);
+  --accent: oklch(0.96 0.03 25);
   --accent-foreground: oklch(0.2 0.01 30);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.9 0.01 80);
+  --border: oklch(0.93 0.012 30);
   --input: oklch(0.88 0.01 80);
-  --ring: oklch(0.59 0.235 28);
-  --gradient-hero: linear-gradient(180deg, oklch(0.17 0.01 30 / 0.15) 0%, oklch(0.17 0.01 30 / 0.55) 55%, oklch(0.17 0.01 30 / 0.92) 100%);
+  --ring: oklch(0.66 0.19 25);
+  --gradient-hero: linear-gradient(180deg, oklch(0.17 0.01 30 / 0.15) 0%, oklch(0.17 0.01 30 / 0.4) 55%, oklch(0.17 0.01 30 / 0.85) 100%);
   --gradient-card: linear-gradient(180deg, transparent 35%, oklch(0.17 0.01 30 / 0.9) 100%);
   --shadow-pop: 0 18px 40px -18px color-mix(in oklab, var(--primary) 55%, transparent);
 }
@@ -114,8 +114,21 @@
 @keyframes marquee { to { transform: translateX(-50%); } }
 @utility animate-marquee { animation: marquee 40s linear infinite; }
 
+@keyframes wind {
+  0% { transform: translate3d(-20vw, 0, 0) rotate(var(--r, -4deg)); opacity: 0; }
+  15% { opacity: var(--o, 0.6); }
+  85% { opacity: var(--o, 0.6); }
+  100% { transform: translate3d(120vw, var(--dy, -6vh), 0) rotate(var(--r, -4deg)); opacity: 0; }
+}
+@utility wind-streak {
+  position: absolute; left: 0; height: 2px; width: var(--w, 18vw); border-radius: 9999px;
+  background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.75), transparent);
+  filter: blur(0.5px);
+  animation: wind var(--d, 4s) cubic-bezier(.4,0,.2,1) infinite; animation-delay: var(--delay, 0s);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
-  .animate-kenburns, .animate-marquee { animation: none; }
+  .animate-kenburns, .animate-marquee, .wind-streak { animation: none; display: none; }
 }
