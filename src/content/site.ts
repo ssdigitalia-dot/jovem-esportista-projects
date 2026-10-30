@@ -1,4 +1,9 @@
 import heroVideoAsset from "@/assets/videos/hero.mp4.asset.json";
+import futsalEquipe from "@/assets/photos/futsal-equipe.jpg.asset.json";
+import futsalTreino from "@/assets/photos/futsal-treino.jpg.asset.json";
+import futsalAluno from "@/assets/photos/futsal-aluno.jpg.asset.json";
+import projetaMural from "@/assets/photos/projeta-mural.jpg.asset.json";
+import jovemEsportistaRua from "@/assets/photos/jovem-esportista-rua.jpg.asset.json";
 /**
  * Conteúdo editável do site. Todos os textos, fotos, vídeo, projetos,
  * depoimentos, parceiros e contatos vêm deste arquivo.
@@ -55,6 +60,8 @@ export type Project = {
   name: string;
   area: "Esporte" | "Cultura" | "Educação" | "Ação social";
   image: string;
+  /** Fotos reais enviadas pela ONG; a galeria só aparece quando há fotos. */
+  photos?: string[];
   summary: string;
   description: string;
   audience?: string;
@@ -66,7 +73,8 @@ export const projects: Project[] = [
     slug: "futebol-de-salao",
     name: "Futebol de Salão",
     area: "Esporte",
-    image: wix("3f7e8a6b3e2847be9a31ddcbd252c856", "jpeg"),
+    image: futsalEquipe.url,
+    photos: [futsalEquipe.url, futsalTreino.url, futsalAluno.url, projetaMural.url, jovemEsportistaRua.url],
     summary: "Disciplina, respeito e trabalho em equipe dentro e fora da quadra.",
     description:
       "O projeto de futebol de salão tem como objetivo desenvolver a disciplina, o respeito, o trabalho em equipe e a promoção de hábitos saudáveis. Além da prática esportiva, também abordamos valores sociais fundamentais para a formação cidadã. Acreditamos que, através do esporte, podemos moldar não apenas atletas, mas cidadãos conscientes e engajados.",
