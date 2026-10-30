@@ -47,7 +47,13 @@ function ProjectPage() {
           <Link to="/projetos" className="inline-flex items-center gap-2 text-sm font-bold text-muted-foreground hover:text-primary"><ArrowLeft size={16} /> Todos os projetos</Link>
           <h2 className="mt-6 text-4xl font-extrabold uppercase">Sobre o projeto</h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{p.description}</p>
-          <img src={p.image} alt={`Participantes em atividade de ${p.name}`} className="mt-10 w-full rounded-2xl" />
+          {p.photos && p.photos.length > 0 && (
+            <div className="mt-10 grid gap-4 sm:grid-cols-2">
+              {p.photos.map((src, i) => (
+                <img key={src} src={src} alt={`Foto ${i + 1} de ${p.name}`} loading="lazy" className="h-full w-full rounded-2xl object-cover" />
+              ))}
+            </div>
+          )}
         </Reveal>
         <Reveal delay={150} as="aside" className="h-fit space-y-6 rounded-2xl bg-muted p-7 md:sticky md:top-28">
           {p.audience && (
