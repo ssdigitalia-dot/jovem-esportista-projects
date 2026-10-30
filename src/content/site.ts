@@ -4,6 +4,7 @@ import futsalTreino from "@/assets/photos/futsal-treino.jpg.asset.json";
 import futsalAluno from "@/assets/photos/futsal-aluno.jpg.asset.json";
 import projetaMural from "@/assets/photos/projeta-mural.jpg.asset.json";
 import jovemEsportistaRua from "@/assets/photos/jovem-esportista-rua.jpg.asset.json";
+import capoeiraAula from "@/assets/photos/capoeira-aula.jpg.asset.json";
 /**
  * Conteúdo editável do site. Todos os textos, fotos, vídeo, projetos,
  * depoimentos, parceiros e contatos vêm deste arquivo.
@@ -85,7 +86,8 @@ export const projects: Project[] = [
     slug: "capoeira",
     name: "Capoeira",
     area: "Esporte",
-    image: wix("6211aca65a09420da9b09d7c61d4162a", "jpeg"),
+    image: capoeiraAula.url,
+    photos: [capoeiraAula.url],
     summary: "Cultura brasileira, ritmo e espírito de grupo em cada roda.",
     description:
       "As aulas de capoeira oferecem uma experiência rica e envolvente, valorizando a cultura brasileira enquanto promovem o desenvolvimento físico e social dos participantes. A prática aprimora a coordenação motora, equilíbrio, ritmo e disciplina, ao mesmo tempo em que incentiva valores como respeito, cooperação e espírito de grupo.",
