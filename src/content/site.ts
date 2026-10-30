@@ -1,3 +1,12 @@
+import logoImg from "@/assets/photos/logo.jpg.asset.json";
+import bannerImg from "@/assets/photos/banner.jpg.asset.json";
+import bannerSideImg from "@/assets/photos/banner-side.jpg.asset.json";
+import balletImg from "@/assets/photos/ballet.jpg.asset.json";
+import zumbaImg from "@/assets/photos/zumba.jpg.asset.json";
+import informaticaImg from "@/assets/photos/informatica.jpg.asset.json";
+import fotografiaImg from "@/assets/photos/fotografia.jpg.asset.json";
+import pascoaImg from "@/assets/photos/pascoa-feliz.jpg.asset.json";
+import bancoImg from "@/assets/photos/banco-de-alimentos.jpg.asset.json";
 import heroVideoAsset from "@/assets/videos/hero.mp4.asset.json";
 import futsalEquipe from "@/assets/photos/futsal-equipe.jpg.asset.json";
 import futsalTreino from "@/assets/photos/futsal-treino.jpg.asset.json";
@@ -8,16 +17,13 @@ import capoeiraAula from "@/assets/photos/capoeira-aula.jpg.asset.json";
 /**
  * Conteúdo editável do site. Todos os textos, fotos, vídeo, projetos,
  * depoimentos, parceiros e contatos vêm deste arquivo.
- * Textos e fotos foram extraídos de https://www.jovemesportista.org/.
+ * Textos foram extraídos de https://www.jovemesportista.org/; as fotos ficam hospedadas no próprio site.
  */
 
-const wix = (id: string, ext = "jpg", w = 1400, h = 1000) =>
-  `https://static.wixstatic.com/media/e7fda0_${id}~mv2.${ext}/v1/fill/w_${w},h_${h},al_c,q_85,enc_auto/foto.${ext}`;
-
 export const media = {
-  logo: wix("04f77ada53684df3be41d875af949187", "jpg", 240, 240),
-  banner: wix("ffc53056376f4e7499a3a9c820b164e2", "jpeg", 1600, 1000),
-  bannerSide: wix("5f9d1e3777ea4d17ac0746c336e03f31", "jpg", 900, 1100),
+  logo: logoImg.url,
+  banner: bannerImg.url,
+  bannerSide: bannerSideImg.url,
   /** Vídeo institucional: informe a URL de um .mp4 (e .vtt de legendas) para substituir a abertura em fotos. */
   heroVideo: { src: heroVideoAsset.url } as null | { src: string; captions?: string; poster?: string },
 };
@@ -97,7 +103,7 @@ export const projects: Project[] = [
     slug: "ballet",
     name: "Ballet",
     area: "Cultura",
-    image: wix("3473c063665a4e458c24582df432b626"),
+    image: balletImg.url,
     summary: "Postura, concentração e expressão corporal com sensibilidade artística.",
     description:
       "As aulas de ballet promovem disciplina, concentração, postura e expressão corporal. A atividade contribui para o desenvolvimento físico, emocional e social, além de estimular a autoestima, a sensibilidade artística e o trabalho em grupo.",
@@ -108,7 +114,7 @@ export const projects: Project[] = [
     slug: "zumba",
     name: "Zumba",
     area: "Esporte",
-    image: wix("f8ebe7a4917d4667ab1d683b9304f0e2", "jpeg"),
+    image: zumbaImg.url,
     summary: "Dança e exercício aeróbico para se manter ativo enquanto se diverte.",
     description:
       "As aulas de Zumba são uma forma divertida e energizante de se exercitar. Combinando dança e exercícios aeróbicos, elas proporcionam benefícios para a saúde, melhoram o condicionamento físico e elevam a autoestima.",
@@ -118,7 +124,7 @@ export const projects: Project[] = [
     slug: "informatica",
     name: "Informática",
     area: "Educação",
-    image: wix("c3546f0a207d436994308a55fcb05e1b"),
+    image: informaticaImg.url,
     summary: "Inclusão digital e acesso à tecnologia para todas as idades.",
     description:
       "O curso de informática promove inclusão digital e acesso à tecnologia. Os alunos aprendem noções básicas de computador, digitação, internet, pacote Office e uso consciente da tecnologia, ampliando oportunidades educacionais e profissionais.",
@@ -129,7 +135,7 @@ export const projects: Project[] = [
     slug: "fotografia",
     name: "Fotografia",
     area: "Cultura",
-    image: wix("8ab007cb88b24c53adb06243ec55a192"),
+    image: fotografiaImg.url,
     summary: "Criatividade e olhar artístico por trás das lentes.",
     description:
       "O curso de fotografia estimula a criatividade e a expressão artística dos participantes. São ensinadas técnicas básicas de fotografia, enquadramento, iluminação e prática fotográfica, incentivando o desenvolvimento cultural e profissional.",
@@ -139,7 +145,7 @@ export const projects: Project[] = [
     slug: "pascoa-feliz",
     name: "Páscoa Feliz",
     area: "Ação social",
-    image: wix("e17154b385c842f6b0f6a0ceeb267695", "jpeg"),
+    image: pascoaImg.url,
     summary: "Há mais de 25 anos levando alegria e solidariedade na Páscoa.",
     description:
       "O Projeto Páscoa Feliz tem feito a diferença há mais de 25 anos, promovendo alegria e solidariedade durante a Páscoa. Com um compromisso contínuo de apoiar comunidades, nosso objetivo é levar sorrisos e esperança para aqueles que mais precisam.",
@@ -149,7 +155,7 @@ export const projects: Project[] = [
     slug: "banco-de-alimentos",
     name: "Banco de Alimentos",
     area: "Ação social",
-    image: wix("4a285c6234d94d90a92d61df8bca3e60", "jpeg"),
+    image: bancoImg.url,
     summary: "Combate à insegurança alimentar com a Prefeitura de Diadema e doadores.",
     description:
       "O Banco de Alimentos é uma ação social voltada ao combate à insegurança alimentar e ao apoio de famílias em situação de vulnerabilidade social. Por meio de parcerias com a Prefeitura de Diadema, doadores e colaboradores, realizamos a arrecadação e distribuição de alimentos para famílias cadastradas no programa.",
